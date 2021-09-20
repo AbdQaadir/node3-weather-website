@@ -8,6 +8,8 @@ const { forecast } = require("./utils/forecast");
 
 const app = express();
 
+const PORT = process.env.PORT || 5000,
+
 //  Define path for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -103,4 +105,4 @@ app.get("*", (req, res) => {
         name: "Lateef Quadri",
     });
 })
-app.listen(5000, () => console.log("App running on port 5000"))
+app.listen(PORT, () => console.log("App running on port " + PORT ))

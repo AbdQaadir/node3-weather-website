@@ -11,7 +11,7 @@ form.onsubmit = (e) => {
     messageOne.textContent = "Loading...";
     messageTwo.textContent = "";
     
-    fetch(`http://localhost:5000/weather?location=${location}`)
+    fetch(`/weather?location=${location}`)
     .then((response) => response.json())
     .then((data) => {
         if(data.error){
