@@ -1,19 +1,19 @@
 
-var path = require("path");
-var express = require("express");
-var hbs = require("hbs");
+const path = require("path");
+const express = require("express");
+const hbs = require("hbs");
 
-var { geocode } = require("./utils/geocode");
-var { forecast } = require("./utils/forecast");
+const { geocode } = require("./utils/geocode");
+const { forecast } = require("./utils/forecast");
 
-var app = express();
+const app = express();
 
-var PORT = process.env.PORT || 5000,
+const PORT = process.env.PORT || 5000;
 
 //  Define path for Express config
-var publicDirectoryPath = path.join(__dirname, '../public');
-var viewsPath = path.join(__dirname, '../templates/views');
-var partialsPath = path.join(__dirname, '../templates/partials');
+const publicDirectoryPath = path.join(__dirname, '../public');
+const viewsPath = path.join(__dirname, '../templates/views');
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 
 // Setup handlebars engine and views location
