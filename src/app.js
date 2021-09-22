@@ -74,10 +74,9 @@ app.get("/weather", (req, res) => {
                      });
                  }
                  res.send({
-                     forecast: `${response.weather_descriptions[0]}. It is currently ${response.temperature} degreees out. There is a ${response.precip * 100}% chance of rain`
+                     forecast: `${response.weather_descriptions[0]}. It is currently ${response.temperature} degreees out. There is a ${response.precip * 100}% chance of rain`,
+                     location: response.location,
                     })
-                //  res.send(response)
-                //  res.render('index', response)
             })
         
     });

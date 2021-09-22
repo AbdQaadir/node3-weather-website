@@ -18,9 +18,8 @@ form.onsubmit = (e) => {
             messageOne.textContent = data.message;
             return;
         }
-        messageOne.textContent = data.location;
+        messageOne.textContent = `${data.location.name}, ${data.location.region}, ${data.location.country}`;
         messageTwo.textContent = data.forecast;
-        console.log(data)
     })
     .catch((error) => console.log(error))
         
